@@ -12,5 +12,6 @@ namespace ServicuerosSA.Models
 
         [Display(Name = "Seleccione su genero")]
         public string Detalle { get; set; }
+        [Display(Name ="Seleccione")]
     }
 }
