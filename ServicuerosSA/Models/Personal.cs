@@ -33,7 +33,7 @@ namespace ServicuerosSA.Models
         public Sexo Sexo { get; set; }
 
         [Required(ErrorMessage = "Campo Rrequerido")]
-        [Display(Name = "La direeccion del Proveedor ")]
+        [Display(Name = "Direeccion del Proveedor ")]
         [StringLength(17, MinimumLength = 9, ErrorMessage = "El numero de caracteres debe ser entre 9 y 17")]
         public string Telefono { get; set; }
 

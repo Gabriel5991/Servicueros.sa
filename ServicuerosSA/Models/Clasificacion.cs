@@ -11,7 +11,7 @@ namespace ServicuerosSA.Models
         public int ClasificacionId { get; set; }
 
         [Required(ErrorMessage = "Campo obligatorio")]
-        [Display(Name = "Ingrese el tipo de piel")]
+        [Display(Name = "Seleccione el tipo de piel")]
         public string Selecciones { get; set; }
 
 

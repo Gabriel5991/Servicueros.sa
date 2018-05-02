@@ -24,7 +24,7 @@ namespace ServicuerosSA.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Fechaingreso { get; set; }
          
-        [Display(Name = " El nombre responsable en recibir el lote ")]
+        [Display(Name = "Nombre del responsable en recibir el lote ")]
         public int PersonalId { get; set; }
         public Personal Personal { get; set; }
 
@@ -32,7 +32,7 @@ namespace ServicuerosSA.Models
         public TipoPiel TipoPieles { get; set; }
 
         [Display(Name = "Si existe alguna observacion en la piel ingresada")]
-        public String Observaciones { get; set; }
+        public string Observaciones { get; set; }
 
     }
 }
