@@ -1,0 +1,57 @@
+﻿@model ServicuerosSA.Models.Lote
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Lote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigolote)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Codigolote)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Numerodepieles)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Numerodepieles)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fechaingreso)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fechaingreso)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Personal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Personal.PersonalId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPieles)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoPieles.TipoPielId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="LoteId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
