@@ -11,7 +11,9 @@ namespace ServicuerosSA.Models
         public int SexoId { get; set; }
 
         [Display(Name = "Seleccione su genero")]
+        [Required(ErrorMessage ="Campo Requerido")]
         public string Detalle { get; set; }
-        [Display(Name ="Seleccione")]
+       
+       
     }
 }

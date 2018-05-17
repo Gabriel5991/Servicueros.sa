@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ServicuerosSA.Migrations
 {
-    public partial class efcoresql : Migration
+    public partial class inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

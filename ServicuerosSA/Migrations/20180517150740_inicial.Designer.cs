@@ -11,8 +11,8 @@ using System;
 namespace ServicuerosSA.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180418161531_relaciones")]
-    partial class relaciones
+    [Migration("20180517150740_inicial")]
+    partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -187,13 +187,15 @@ namespace ServicuerosSA.Migrations
 
                     b.Property<int>("CantidadAlmacenamiento");
 
-                    b.Property<string>("NombreBodega");
+                    b.Property<string>("NombreBodega")
+                        .IsRequired();
 
                     b.Property<int>("NumeroEstantes");
 
                     b.Property<int>("TipoBodegaId");
 
-                    b.Property<string>("Ubicacion");
+                    b.Property<string>("Ubicacion")
+                        .IsRequired();
 
                     b.HasKey("BodegaId");
 
@@ -277,21 +279,29 @@ namespace ServicuerosSA.Migrations
                     b.Property<int>("PersonalId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Apellidos");
+                    b.Property<string>("Apellidos")
+                        .IsRequired();
 
-                    b.Property<string>("Cedula");
+                    b.Property<string>("Cedula")
+                        .IsRequired()
+                        .HasMaxLength(10);
 
-                    b.Property<string>("Celular");
+                    b.Property<string>("Celular")
+                        .IsRequired()
+                        .HasMaxLength(17);
 
                     b.Property<string>("Direccion");
 
                     b.Property<DateTime>("FechaNacimiento");
 
-                    b.Property<string>("Nombres");
+                    b.Property<string>("Nombres")
+                        .IsRequired();
 
                     b.Property<int>("SexoId");
 
-                    b.Property<string>("Telefono");
+                    b.Property<string>("Telefono")
+                        .IsRequired()
+                        .HasMaxLength(17);
 
                     b.HasKey("PersonalId");
 
@@ -304,10 +314,6 @@ namespace ServicuerosSA.Migrations
                 {
                     b.Property<int>("ProveedorId")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Apellidos")
-                        .IsRequired()
-                        .HasMaxLength(255);
 
                     b.Property<string>("Celular")
                         .IsRequired()
@@ -361,7 +367,8 @@ namespace ServicuerosSA.Migrations
                     b.Property<int>("SexoId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Detalle");
+                    b.Property<string>("Detalle")
+                        .IsRequired();
 
                     b.HasKey("SexoId");
 
