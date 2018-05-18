@@ -30,9 +30,63 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Personales" asp-action="Index">Personal</a></li>
                     <li><a asp-area="" asp-controller="Proveedores" asp-action="Index">Proveedores</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                            Personal <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Personales" asp-action="Index">Personal</a></li>
+                            <li class="divider"></li>
+                            <li><a asp-area="" asp-controller="Sexos" asp-action="Index">Sexo</a></li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                            Proceso <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Lotes" asp-action="Index">1.- Ingreso de Lotes</a></li>
+                            <li class="divider"></li>
+                            <li><a asp-area="" asp-controller="BodegaClasificaciones" asp-action="Index">2.- Clasificación Pelo</a></li>
+                            <li class="divider"></li>
+                            <li><a asp-area="" asp-controller="Pelambres" asp-action="Index">3.- Pelambre</a></li>
+                            <li class="divider"></li>
+                            <li><a asp-area="" asp-controller="Descarnes" asp-action="Index">4.- Descarne</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                            Administracion <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Bodegas" asp-action="Index">Bodegas</a></li>
+                            <li class="divider"></li>
+                            <li><a asp-area="" asp-controller="TipoPiels" asp-action="Index">Tipos de Pieles</a></li>
+                            <li class="divider"></li>
+                            <li><a asp-area="" asp-controller="Clasificaciones" asp-action="Index">Clasificaicones</a></li>
+                            <li class="divider"></li>
+                            <li><a asp-area="" asp-controller="Bombos" asp-action="Index">Bombos</a></li>
+                            <li class="divider"></li>
+                            <li><a asp-area="" asp-controller="Medidas" asp-action="Index">Medidas</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">   
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                            Formulas<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Formulas" asp-action="Index">Formulas</a></li>
+                            <li class="divider"></li>
+                            <li><a asp-area="" asp-controller="Componentes" asp-action="Index">Componentes de Formulas</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
@@ -49,6 +103,13 @@
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/Lotes.js" asp-append-version="true"></script>
+        <script src="~/js/Formulas.js" asp-append-version="true"></script>
+        <script src="~/js/Bombos.js" asp-append-version="true"></script>
+        <script src="~/js/Pelambre.js" asp-append-version="true"></script>
+        <script src="~/js/TipoPieles.js" asp-append-version="true"></script>
+        <script src="~/js/Clasificaciones.js" asp-append-version="true"></script>
+
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
